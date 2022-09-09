@@ -24,18 +24,18 @@ const JSBlogData = [
 
 const JSBlog = () => {
   return (
-    <div className="px-10 relative">
-      <h2 className="text-4xl font-semibold ml-10">The latest from Ableton</h2>
-      <div className="absolute top-3 right-20 flex flex-row">
+    <div className="px-10 relative md:mt-0 mt-10">
+      <h2 className="md:text-4xl text-2xl font-semibold md:ml-10 ml-6">The latest from Ableton</h2>
+      <div className="md-max:hidden absolute top-3 right-20 flex flex-row">
         {Category.map((item) => (
           <a className="text-xl font-semibold ml-5 text-[#0000ff]" href={item.link}>
             <p>{item.category}</p>
           </a>
         ))}
       </div>
-      <div className="flex flex-row my-5">
+      <div className="flex flex-row my-5 md:flex-nowrap flex-wrap">
         {JSBlogData.map((item) => (
-          <div className="m-10">
+          <div className="md:m-10 m-6 md:w-fit w-5/12">
             <a href={item.link}>
               <img className="mb-3" src={item.img} />
               <div>
@@ -45,6 +45,9 @@ const JSBlog = () => {
             </a>
           </div>
         ))}
+      </div>
+      <div className="md:hidden text-center mb-10">
+        <a className="text-[#0000ff] font-semibold text-sm after:content-['>'] after:ml-0.5" href="#">See all posts</a>
       </div>
     </div>
   )

@@ -64,7 +64,7 @@ const LoopEventsData = [
 ]
 
 const TeaserItem = ({ src, link, category, title }) => (
-  <div className="m-10">
+  <div className="md:m-10 m-6 md:w-fit w-5/12">
     <a href={link}>
       <img className="mb-3" src={src} />
       <div>
@@ -79,37 +79,45 @@ const Teasers = () => {
   return (
     <div>
       <div className="px-10 relative">
-        <h2 className="text-4xl font-semibold ml-10">In focus: sound design</h2>
-        <div className="flex flex-row my-5">
+        <h2 className="text-4xl font-semibold md:ml-10 ml-6">In focus: sound design</h2>
+        <div className="flex flex-row my-5 md:flex-nowrap flex-wrap">
           {InFocusData.map((item) => (
-            <TeaserItem src={item.src} link={item.link} category={item.category} title={item.title}/>
+            <TeaserItem src={item.src} link={item.link} category={item.category} title={item.title} />
           ))}
         </div>
       </div>
+
       <div className="px-10 relative">
-        <h2 className="text-4xl font-semibold ml-10">One Thing videos: monthly creative tips</h2>
-        <div className="absolute top-3 right-20 flex flex-row">
+        <h2 className="text-4xl font-semibold md:ml-10 ml-6">One Thing videos: monthly creative tips</h2>
+        <div className="md-max:hidden absolute top-3 right-20 flex flex-row">
           <a className="text-xl font-semibold ml-5 text-[#0000ff]" href="#">
             <p className="after:content-['>'] after:ml-0.5">See all videos</p>
           </a>
         </div>
-        <div className="flex flex-row my-5">
+        <div className="flex flex-row my-5 md:flex-nowrap flex-wrap">
           {OneThingData.map((item) => (
-            <TeaserItem src={item.src} link={item.link} category={item.category} title={item.title}/>
+            <TeaserItem src={item.src} link={item.link} category={item.category} title={item.title} />
           ))}
         </div>
+        <div className="md:hidden text-center mb-10">
+          <a className="text-[#0000ff] font-semibold text-sm after:content-['>'] after:ml-0.5" href="#">See all videos</a>
+        </div>
       </div>
+
       <div className="px-10 relative">
-        <h2 className="text-4xl font-semibold ml-10">Videos and features from Loop events</h2>
-        <div className="absolute top-3 right-20 flex flex-row">
+        <h2 className="text-4xl font-semibold md:ml-10 ml-6">Videos and features from Loop events</h2>
+        <div className="md-max:hidden absolute top-3 right-20 flex flex-row">
           <a className="text-xl font-semibold ml-5 text-[#0000ff]" href="#">
             <p className="after:content-['>'] after:ml-0.5">See more</p>
           </a>
         </div>
-        <div className="flex flex-row my-5">
+        <div className="flex flex-row my-5 md:flex-nowrap flex-wrap">
           {LoopEventsData.map((item) => (
-            <TeaserItem src={item.src} link={item.link} category={item.category} title={item.title}/>
+            <TeaserItem src={item.src} link={item.link} category={item.category} title={item.title} />
           ))}
+        </div>
+        <div className="md:hidden text-center mb-10">
+          <a className="text-[#0000ff] font-semibold text-sm after:content-['>'] after:ml-0.5" href="#">See more</a>
         </div>
       </div>
     </div>
