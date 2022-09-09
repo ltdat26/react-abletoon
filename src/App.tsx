@@ -8,7 +8,7 @@ import Categories from './components/categories'
 
 function App() {
   return (
-    <div className='bg-[#F3F3F3]'>
+    <div className='bg-[#F3F3F3] relative'>
       <div className='max-w-screen-2xl flex justify-center m-auto bg-white'>
         <div className='w-full'>
           <Navbar />
