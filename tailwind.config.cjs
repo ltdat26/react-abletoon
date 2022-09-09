@@ -9,7 +9,11 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif']
       },
       height: {
-        '256': '64rem'
+        '256': '64rem',
+        '384': '96rem'
+      },
+      screens: {
+        'md-max': { 'max': '767px' }
       }
     },
   },

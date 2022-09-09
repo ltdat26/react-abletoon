@@ -15,8 +15,8 @@ function App() {
           <main>
             <HomePage />
             <JSBlog />
-            <Teasers/>
-            <Categories/>
+            <Teasers />
+            <Categories />
           </main>
           <Footer />
         </div>
